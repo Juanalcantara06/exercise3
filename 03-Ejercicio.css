@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+:root {
+  --color-primario: #7ee4bc;
+}
+body {
+  background-color: #cccccc;
+  font-family: "Roboto", sans-serif;
+}
+header {
+  height: 60px;
+  background: -webkit-linear-gradient(left, var(--color-primario), #4b6ec2);
+}
+
+h1 {
+  color: #444;
+  text-align: center;
+  margin: 40px 0;
+}
+
+.cards {
+  padding: 0 50px 50px 50px;
+  text-align: center;
+}
+
+.color-primario {
+  color: var(--color-primario);
+}
+
+.card {
+  height: 400px;
+  width: 300px;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 2px;
+  overflow: hidden;
+  display: inline-block;
+  margin: 20px;
+}
+.card,
+.card * {
+  transition: all 0.2s ease;
+}
+
+.card__imagen {
+  height: 80%;
+  overflow: hidden;
+  position: relative;
+  background-color: #ddd;
+}
+
+.card__imagen img {
+    width: 100%;
+  transform: translate(0, -60px);
+}
+
+.card__details {
+  position: absolute;
+  color: white;
+  padding: 8px 11px;
+  border: 2px solid white;
+  top: 40%;
+  left: 30%;
+  visibility: hidden;
+}
+
+.card:hover .card__details {
+    visibility: visible;
+}
+
+.card__info {
+  padding: 20px;
+  position: relative;
+  height: 40%;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.info-precio{
+    color: var(--color-primario);
+ }
+
+.card__subtitulo {
+  color: #888;
+  font-size: 1.14rem;
+}
+
+
+.card__descripcion {
+  margin-top: 5px;
+  visibility: hidden;
+  opacity: 0;
+  text-align: left;
+}
+
+.card__negrita{
+    font-weight: 900;
+    font-size: 0.8rem;
+    color: #111
+}
+
+.card__tallas{
+    color: #888;
+    font-size: 0.7rem;
+}
+
+.azul-1{
+    color: #295689;
+}
+
+.rojo-1{
+    color: #e03434f8;
+}
+
+.blanco-1{
+    color: #ddd;
+}
+.verde-1{
+    color: #108a3e;
+}
+.card:hover .card__imagen {
+  height: 50%;
+}
+
+.card:hover .card__imagen img {
+  filter: contrast(0.5);
+   
+}
+
+
+.card:hover .card__info {
+  height: 60%;
+}
+
+.card:hover .card__descripcion {
+  visibility: visible;
+  opacity: 1;
+}
+.card:hover {
+  box-shadow: #bbb 0px 0px 20px;
+  transform: scale(1.05);
+  
+
+}
